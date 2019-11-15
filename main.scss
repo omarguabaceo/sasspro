@@ -1,0 +1,57 @@
+$black: #333;
+$blue: #036;
+$strongblue: #069;
+$pale: #567;
+
+$font-stack: "Andale mono", monospace;
+$font-size: 14px;
+
+@mixin colorthing($rad, $height, $width, $lh, $color){
+border-radius: $rad;
+height: $height;
+width: $width;
+line-height: $lh;
+text-align: center;
+color: $color;
+background: $pale;
+margin: 0 auto;
+}
+
+
+
+body {
+background: $pale;
+color: $blue;
+font-family: $font-stack;
+font-size: $font-size;
+}
+
+article {
+background: white;
+width: 600px;
+margin: 0 auto;
+padding: 40px;
+box-sizing: border-box;
+position: relative;
+z-index: -2;
+}
+
+
+header{
+    @include colorthing(100%, 100px, 200px, $blue, white);
+}
+
+h1 {
+
+font-size: $font-size + 2;
+
+}
+
+
+footer{
+    @include colorthing(100%, 150px, 150px, $blue, white);
+    font-size: $font-size -3;
+    z-index: -4;
+    position: relative;
+    margin-top: 60px;
+}
